@@ -21,6 +21,6 @@ def user_Check(request):
     except Exception:
         print("发生异常")
         ret["type"] = "f"
-        ret["info"] = "多半你输入的email有问题"
+        ret["info"] = "你输入的email有问题"
 
     return JsonResponse(ret, safe=False)

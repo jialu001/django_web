@@ -27,17 +27,21 @@
                  data : iptoS,
                  async : false,
                  success : function(data,status){
+                     console.log(status);
                      if (status=="success"){
-                     //      alert(data["info"]+"\n"+
-                     //  data["type"]  +"\n"+
-                     // location.href);
 
+                         // 目的 ： 用户正确登录的判断
+                         // 方法 ： 对data字典 key 为type 进行字符匹配判断
                           if(data["type"] =="t"){
                                 check = true ;
+
+                            $.cookie('email',data["email"] , { expires: 7, path:'/'  });
+                          }else if(data["type"] =="f"){
+                                alert(data["info"]+"\n"+"联系管理员：18620010793");
                           }
 
-                    $.cookie('email',data["email"] , { expires: 7, path:'/'  });
                      }
+
                  }
              });
         //alert(check);
