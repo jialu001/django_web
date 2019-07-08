@@ -176,6 +176,7 @@ $(document).ready(
          });
 
          $("#dropdown-hw").click(function () {
+
                 $("#dropdown-1-s").text("华为");
                 setChangJiaInfo("huawei");
                 setdropdown(0,hwgmk);
@@ -432,6 +433,7 @@ $(document).ready(
          data : " ",
          async : true,
          success : function(ret){
+
                  ret.forEach(function (item) {
                       var cjID = 0;
                     for (var key in item) {
@@ -440,16 +442,16 @@ $(document).ready(
                                 cjID =1;
                           }
                           if(item[key]=="思科"){
-cjID =2;
+                                cjID =2;
                           }
                           if(item[key]=="H3C"){
-cjID =3;
+                                cjID =3;
                           }
                           if(item[key]=="贝尔"){
-cjID =4;
+                                cjID =4;
                           }
                           if(item[key]=="迪普"){
-cjID =5;
+                                cjID =5;
                           }
                       }
                        if(key=="xinghao"){
@@ -480,6 +482,7 @@ cjID =5;
     }
 
     function setdropdown(start,changJia) {
+
              $("#dropdown-content-gmk-right").empty();
              var contNum = 6+start;
              for (i=start;((i<changJia.length-1));i++){

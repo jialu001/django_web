@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新主页测试</title>
+
+     <!-- Bootstrap core CSS -->
+  <link href="../media/css/bootstrap-4.0.0.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+  <link href="../media/css/xinxi.css" rel="stylesheet">
+  <link href="../media/css/SHandOUT-2.css" rel="stylesheet">
+  <link rel="shortcut icon" href="../media/images/favicon.ico" />
+  <link href="../media/css/dropdown.css" rel="stylesheet">
+  <link href="../media/css/XinIndex.css" rel="stylesheet">
+  <script src="../media/js/jquery-3.2.1.min.js"></script>
+  <script src="../media/js/popper.min.js"></script>
+  <script src="../media/js/bootstrap-4.0.0.js"></script>
+  <script src="../media/js/Examine.js"></script>
+  <script src="../media/js/jquery.cookie.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">回到主页</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">主页
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="showinfo">个人信息</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactUs">联系我们</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="log">登出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div id="shenhe_tk" class="xinxibiao container haveaBorder" style="display: none;z-index: 1003;" >
+      <!-- 弹框表格 用于显示信息 -->
+      <div class="row " style="margin-top: 20px;">
+          <div style="width: 20%;margin-left: 40%">
+              <span style="font-family: fantasy">申请单详细</span></div>
+      </div>
+
+      <div class="row " style="margin-top: 20px;">
+                <div id="sh_left_169" style="width: 50%;height:80%;">
+                    <!-- 左侧结束 -->
+                </div>
+                <div  id="sh_right_169" style="width: 50%;height:80%;">
+                     <!-- 右侧结束 -->
+                </div>
+      </div>
+
+      <div class="row " id="reason_title" style="margin-top: 20px;display: none;">
+          <div style="width: 20%;margin-left: 40%">
+              <span style="font-family: fantasy">出库单相关信息</span></div>
+      </div>
+
+      <div class="row " id="reason_info" style="margin-top: 20px;">
+                <div id="sh_left_reason" style="width: 50%;height:80%;">
+                    <!-- 左侧结束 -->
+                </div>
+                <div  id="sh_right_reason" style="width: 50%;height:80%;">
+                     <!-- 右侧结束 -->
+                </div>
+      </div>
+
+      <div  style="margin-top: 2%;text-align: center;width:100%">
+                <div style="display: inline-block;width: inherit">
+                  <button type="button" class="btn btn-success" id="sh_save">同意</button>
+                  <button type="button" class="btn" id="sh_close" style="margin-left: 20%" >取消</button>
+                </div>
+      </div>
+  </div>
+<div class="row zhuTiDiv  BuJu981 ShangPian1">
+
+   <!-- SH 审核显示DIV -->
+  <div class="haveaBorder" id="info_shenhe" style="display: none;width: 100%;">
+        <table class="table table-hover" id="shenhe_table" style="width:90%;margin-left: 5%;">
+             <!-- 显示页面的table -->
+    <thead>
+      <tr>
+          <th>申请ID</th>
+          <th>申请用户邮箱</th>
+          <th>类型</th>
+          <th>设备网络</th>
+          <th>设备ID</th>
+          <th>申请时间</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+		</div>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+</body>
+</html>

@@ -34,8 +34,15 @@
                          // 方法 ： 对data字典 key 为type 进行字符匹配判断
                           if(data["type"] =="t"){
                                 check = true ;
-
+                            // use cookie to pass info ,maybe there is a better
+                            // way.
+                            // email to choose user ; level to control
+                            // why cookie has to add two details by twice ?
                             $.cookie('email',data["email"] , { expires: 7, path:'/'  });
+
+
+                            $.cookie('level',data["level"] , { expires: 7, path:'/'  });
+
                           }else if(data["type"] =="f"){
                                 alert(data["info"]+"\n"+"联系管理员：18620010793");
                           }

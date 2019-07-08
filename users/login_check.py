@@ -14,6 +14,7 @@ def user_Check(request):
             ret["type"] = "t"
             ret["info"] = "欢迎"
             ret["email"] = gotemail
+            ret["level"] = eml.level
             operation.objects.create(name=gotemail,level=eml.level,op_type="登录",\
                                      op_res=True,op_item="user")
 

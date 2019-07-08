@@ -16,12 +16,12 @@
     <!-- Custom styles for this template -->
   <link href="../media/css/xinxi.css" rel="stylesheet">
   <link href="../media/css/SHandOUT-2.css" rel="stylesheet">
+  <link href="../media/css/dropdown.css" rel="stylesheet">
   <link rel="shortcut icon" href="../media/images/favicon.ico" />
   <script src="../media/js/jquery-3.2.1.min.js"></script>
   <script src="../media/js/popper.min.js"></script>
   <script src="../media/js/bootstrap-4.0.0.js"></script>
-  <script src="../media/js/SHandSearch-2.js"></script>
-  <link href="../media/css/dropdown.css" rel="stylesheet">
+  <script src="../media/js/Search.js"></script>
 
 </head>
 
@@ -55,43 +55,6 @@
     </div>
   </nav>
 
-<div id="shenhe_tk" class="xinxibiao container haveaBorder" style="display: none;z-index: 1003;" >
-      <!-- 弹框表格 用于显示信息 -->
-      <div class="row " style="margin-top: 20px;">
-          <div style="width: 20%;margin-left: 40%">
-              <span style="font-family: fantasy">申请单详细</span></div>
-      </div>
-
-      <div class="row " style="margin-top: 20px;">
-                <div id="sh_left_169" style="width: 50%;height:80%;">
-                    <!-- 左侧结束 -->
-                </div>
-                <div  id="sh_right_169" style="width: 50%;height:80%;">
-                     <!-- 右侧结束 -->
-                </div>
-      </div>
-
-      <div class="row " id="reason_title" style="margin-top: 20px;display: none;">
-          <div style="width: 20%;margin-left: 40%">
-              <span style="font-family: fantasy">出库单相关信息</span></div>
-      </div>
-
-      <div class="row " id="reason_info" style="margin-top: 20px;">
-                <div id="sh_left_reason" style="width: 50%;height:80%;">
-                    <!-- 左侧结束 -->
-                </div>
-                <div  id="sh_right_reason" style="width: 50%;height:80%;">
-                     <!-- 右侧结束 -->
-                </div>
-      </div>
-
-      <div  style="margin-top: 2%;text-align: center;width:100%">
-                <div style="display: inline-block;width: inherit">
-                  <button type="button" class="btn btn-success" id="sh_save">同意</button>
-                  <button type="button" class="btn" id="sh_close" style="margin-left: 20%" >取消</button>
-                </div>
-      </div>
-  </div>
  <!-- 出库弹框表2 -->
   <div id="out2_info" class="container" style="">
       <div class="row" ><h4>请确认出库信息</h4> </div>
@@ -191,39 +154,7 @@
     </tbody>
 </table>
 		</div>
-<!-- LEVEL1 id1光模块显示DIV -->
-{#<div id="info_gmk" style="display: none">#}
-{#    <div class="row set43Center">#}
-{#      <h3>现在是光模块显示页面</h3>#}
-{#  </div>#}
-{#        <!-- 搜索结果的显示页面-->#}
-{#        <div style="width: 100%;padding-top:10px;padding-left:5%;height: 60px;border-color: #71dd8a;border-width: thin;border-style: dashed;">#}
-{#                  <!-- 下拉菜单  -->#}
-{#      <div class="dropdown">#}
-{#        <button class="dropbtn btn" id="dropdown-2-btn">承载网</button>#}
-{#        <div class="dropdown-content">#}
-{#            <li id="dropdown-2-gmk">光模块</li>#}
-{#            <li id="dropdown-2-169">169网</li>#}
-{#            <li id="dropdown-2-czw">承载网</li>#}
-{#        </div>#}
-{#      </div>#}
-{#            <!-- 显示页面的搜索框-->#}
-{#        <input class="input-medium search-query" type="text" placeholder="支持模糊查询光模块(含有)" id="info_gmk_inp"/> <button type="button" class="btn" id="info_gmk_query">快捷查询</button>#}
-{#        </div>#}
-{##}
-{#        <table class="table table-hover" id="gmk_table" style="width:90%;margin-left: 5%;">#}
-{#             <!-- 显示页面的table -->#}
-{#    <thead>#}
-{#      <tr>#}
-{#        <th>ID</th>#}
-{#          <th>厂家</th>#}
-{#          <th>型号</th>#}
-{#      </tr>#}
-{#    </thead>#}
-{#    <tbody>#}
-{#    </tbody>#}
-{#</table>#}
-{#		</div>#}
+
   <!-- LEVEL2 id2 169显示DIV -->
 <div id="info_169" style="display: none">
       <h3 style="text-align: center">现在是169网显示页面</h3>
@@ -262,35 +193,12 @@
 </table>
 		</div>
 
-   <!-- SH 审核显示DIV -->
-<div class="haveaBorder" id="info_shenhe" style="display: none;">
-        <table class="table table-hover" id="shenhe_table" style="width:90%;margin-left: 5%;">
-             <!-- 显示页面的table -->
-    <thead>
-      <tr>
-           <th>申请ID</th>
-        <th>申请用户邮箱</th>
-          <th>类型</th>
-          <th>设备网络</th>
-          <th>设备ID</th>
-          <th>申请时间</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
-		</div>
 
   <!-- 中间提示按钮 -->
   <button type="button" class="btn btn-success setcenter btn-lg" id="dh_result"  >成功</button>
 <!-- 遮罩层 -->
     <div id="mask" class="mask "></div>
-<!-- 设备出库弹框表1 -->
-{#  <div id="out_info" class="xinxibiao container" style="height: 180px;display: none;margin-top: 200px;z-index: 1003">#}
-{#      <h4>请输入你想出库设备的配件名称或规格型号或序列号</h4>#}
-{#          <input class="input-medium search-query" type="text" placeholder="支持模糊查询(含有)" id="input2"/> <button type="button" class="btn" id="query2">快捷查询</button>#}
-{#          <button type="button" class="btn" id="cancel2">取消</button>#}
-{#  </div>#}
+
 
 <!-- 光模块出库弹框表  直接复制入库思路-->
   <div id="out_gmk" class="xinxibiao container" style="display: none;margin-top: 20px;z-index: 1003">
@@ -644,8 +552,8 @@
 
   <!-- Bootstrap core JavaScript -->
  <script src="../media/js/jquery.cookie.js"></script>
-  <script src="../media/js/CKheRK.js" ></script>
-  <script src="../media/js/houtaiControl1.js" ></script>
+  <script src="../media/js/DROPDOWN.js" ></script>
+  <script src="../media/js/indexJUMP.js" ></script>
 
 </body>
 

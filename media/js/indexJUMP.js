@@ -28,6 +28,20 @@ $(document).ready(
          $("#BuChongGongNeng").click(function () {
              alert("功能待开发中");
          })
+
+         //click to jump to examine page
+         $("#shenHe").click(function () {
+            // level check
+            var level = $.cookie('level');
+            if(level=="1"|level=="2"){
+                alert("no permission");
+                return ;
+            }
+            else {
+                window.location.href = 'new';
+            }
+
+      })
     }
 
 
